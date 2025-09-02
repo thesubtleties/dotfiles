@@ -20,6 +20,7 @@ zstyle ':omz:plugins:alias-finder' autoload yes
 # Plugins (combined list with your existing and Python-related plugins)
 plugins=(
     git
+    magic-enter
     docker
     docker-compose
     node
@@ -30,6 +31,9 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     colored-man-pages
+    command-not-found
+    per-directory-history
+    kubectl
 )
 source $ZSH/oh-my-zsh.sh
 
