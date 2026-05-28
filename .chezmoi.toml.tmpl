@@ -1,0 +1,8 @@
+{{- /* Auto-detect WSL by sniffing the kernel osrelease string */ -}}
+{{- $isWsl := false -}}
+{{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) -}}
+{{-   $isWsl = true -}}
+{{- end -}}
+
+[data]
+    is_wsl = {{ $isWsl }}

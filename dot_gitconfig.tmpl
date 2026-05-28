@@ -1,0 +1,13 @@
+[credential]
+{{- if eq .chezmoi.os "darwin" }}
+	helper = osxkeychain
+{{- else if .is_wsl }}
+	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+{{- else }}
+	helper = cache --timeout=3600
+{{- end }}
+[user]
+	name = Steven
+	email = steven@sbtl.dev
+[init]
+	defaultBranch = main
